@@ -1,6 +1,6 @@
 package com.fikri.data;
 
-public class Person {
+public class Person implements Nameable {
 
     public String firstName;
     private String lastName;
