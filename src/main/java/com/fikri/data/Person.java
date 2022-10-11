@@ -1,8 +1,14 @@
 package com.fikri.data;
 
+import com.fikri.annotation.NotBlank;
+
 public class Person implements Nameable {
 
+    @NotBlank
     public String firstName;
+
+
+    @NotBlank(allowEmptyString = true)
     private String lastName;
 
     protected String email;
