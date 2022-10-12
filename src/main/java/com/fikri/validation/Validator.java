@@ -22,18 +22,9 @@ public class Validator {
                 field.setAccessible(true);
                 String value = (String) field.get(obj);
 
-                if (value == null){
-                    throw new RuntimeException(field.getName() + " cannot be blank");
-                }
+                if (!notBlank.allowEmptyString()) value = value.trim();
 
-                if (notBlank.allowEmptyString()) {
-                    //ignore
-                } else {
-                    value = value.trim();
-                }
-
-                if ("".equalsIgnoreCase(value)) {
-
+                if ("".equalsIgnoreCase(value) || null == value) {
                     throw new RuntimeException(field.getName() + " cannot be blank");
                 }
             }
