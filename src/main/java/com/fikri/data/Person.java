@@ -14,6 +14,8 @@ public class Person implements Nameable {
     protected String email;
     private String phone;
 
+    private int age;
+
     public Person() {
     }
 
@@ -24,6 +26,14 @@ public class Person implements Nameable {
         this.phone = phone;
     }
 
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 
     public String getFirstName() {
         return firstName;
