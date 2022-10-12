@@ -4,6 +4,8 @@ import com.fikri.data.Person;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 public class PrimitiveTest {
 
@@ -32,5 +34,17 @@ public class PrimitiveTest {
         person.setAge(20);
 
         System.out.println(field.getInt(person));
+    }
+
+    @Test
+    void getMethod() throws NoSuchFieldException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+
+        Class<Person> personClass = Person.class;
+        Method method = personClass.getDeclaredMethod("setAge", int.class);
+
+        Person person = new Person("fikri","i","fi@mail.com","123");
+        method.invoke(person, 20);
+
+        System.out.println(person.getAge());
     }
 }
