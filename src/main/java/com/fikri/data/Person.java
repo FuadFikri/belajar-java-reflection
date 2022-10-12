@@ -2,6 +2,8 @@ package com.fikri.data;
 
 import com.fikri.annotation.NotBlank;
 
+import java.util.List;
+
 public class Person implements Nameable {
 
     @NotBlank
@@ -16,6 +18,8 @@ public class Person implements Nameable {
 
     private int age;
 
+    private List<String> hobbies;
+
     public Person() {
     }
 
@@ -26,6 +30,13 @@ public class Person implements Nameable {
         this.phone = phone;
     }
 
+    public List<String> getHobbies() {
+        return hobbies;
+    }
+
+    public void setHobbies(List<String> hobbies) {
+        this.hobbies = hobbies;
+    }
 
     public int getAge() {
         return age;
