@@ -14,3 +14,11 @@ Saat kita membuat Java Class, Interface atau Enum, kadang kita menambahkan field
 Dengan kemampuan java.lang.Class, kita bisa membaca seluruh data member yang terdapat pada Java Class, Interface atau Enum pada saat aplikasi nya berjalan
 
 
+
+### Proxy
+- bisa digunakan untuk membuat object bahkan tanpa membuat implementasi sebuah interface
+- fitur ini sangat berguna pada kasus-kasus tertentu, bahkan saat ini populer yang namanya Spring Data yang bisa digunakan untuk memanipulasi  database cukup bermodalkan Interface, tanpa harus membuat implementasi class dan melakukan query database secara manual
+- Saat kita membuat  proxy, kita bisa secara dinamis menerima method yang dipanggil, dan mengembalikan value di method tersebut dengan InvocationHandler
+- 
+
+
